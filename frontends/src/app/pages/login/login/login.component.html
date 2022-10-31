@@ -1,0 +1,35 @@
+<div class="login m-4">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class="active underlineHover"  routerLink="./login"> Log In </h2>
+            <!-- <h2 class="inactive underlineHover"><a  routerLink="/register">Register</a> </h2> -->
+                <form class="mb-3" [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+                    <div class="alert alert-danger mb-3" *ngIf="errorMsg!=''" (input)="errorMsg=''"> Invalid Credintials</div>
+                <!-- username -->
+                <div class="form-group ">
+                    <input type="text" class="mt-5 button-mm form-control" formControlName="userName" placeholder="username" id=" userName" />
+                    <div class="my-3  alert alert-danger" *ngIf="userName?.invalid && (userName?.dirty || userName?.touched || isSubmitted)">
+                        <li *ngIf="userName?.errors?.['required']"> username is required</li>
+                    </div>
+                </div>
+                <!--  password  doc-->
+                <div class="fadeIn third">
+                    <input type="password" class="button-mm" formControlName="password" placeholder="password"  id="password" />
+                     <div class="my-3 alert alert-danger" *ngIf="password?.invalid && (password?.dirty || password?.touched || isSubmitted)">
+                        <li *ngIf="password?.errors?.['required']"> password is required</li>
+                        <li *ngIf="password?.errors?.['pattern']"> invalid format</li>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-warning px-5 text-primary fadeIn mt-4 fourth ">Login</button>
+                </div>
+            </form>
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover"  routerLink="#">Forgot Password?</a>
+            </div>
+
+        </div>
+    </div>
+ </div>

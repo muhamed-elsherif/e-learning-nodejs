@@ -1,0 +1,46 @@
+<div class="login m-4">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <!-- <h2 class="active"  routerLink="/login"> Log In </h2> -->
+            <h2 class="active underlineHover"><a  routerLink="/register">Register</a> </h2>
+            <form class="mb-3"  [formGroup]="registerForm" (ngSubmit)="handleRegister()">
+                   <!-- email -->
+                   <div class="form-group">
+          <input type="email" class="mt-5 button-mm form-control" placeholder="Email" value=""formControlName="email" 
+          id=" Email"/>
+          <div class="my-3 alert alert-danger" *ngIf="email?.invalid && (email?.dirty || email?.touched || isSubmitted)">
+            <li *ngIf="email?.errors?.['required']"> email is required</li>
+            <li *ngIf="email?.errors?.['email']">invalid email</li>
+        </div>
+        </div>
+                <!-- </div> -->
+                <!-- User Name -->
+                <div class="form-group">
+                    <input type="text" class="button-mm form-control" placeholder="Username" formControlName="userName" id=" userName"/>
+                    <div class="alert alert-danger mb-3" *ngIf="errorMsg!=''" (input)="errorMsg=''"> username is used before</div>
+                    <div class="my-3 alert alert-danger" *ngIf="userName?.invalid && (userName?.dirty || userName?.touched || isSubmitted)">
+                        <li *ngIf="userName?.errors?.['required']"> username is required</li>
+                    </div>
+                </div>
+                <!--  password  doc-->
+                <div class="fadeIn third">
+                    <input type='password'  class="button-mm form-control" placeholder="Password " formControlName="password">
+                    <div class="my-3 alert alert-danger" *ngIf="password?.invalid && (password?.dirty || password?.touched || isSubmitted)">
+                        <li *ngIf="password?.errors?.['required']"> password is required</li>
+                        <li *ngIf="password?.errors?.['pattern']"> invalid format</li>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-custom px-5  fadeIn mt-4 fourth ">register</button>
+                   
+                </div>
+            </form>
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover"  routerLink="#">Book Store</a>
+            </div>
+
+        </div>
+    </div>
+ </div>
