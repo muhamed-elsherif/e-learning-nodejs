@@ -1,0 +1,32 @@
+{
+  "name": "e-learnig",
+  "version": "1.0.0",
+  "description": "This a training project within NIT node.js track , this is e-learning mangemnet system to autmoate everything in a educational corporation like school or university , help the teachers and student to do things easy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhamed-elsherif/e-learning-nodejs.git"
+  },
+  "author": "Mohamed Elsherif",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhamed-elsherif/e-learning-nodejs/issues"
+  },
+  "homepage": "https://github.com/muhamed-elsherif/e-learning-nodejs#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.11.0",
+    "mongoose": "^6.6.7",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7",
+    "validator": "^13.7.0"
+  }
+}

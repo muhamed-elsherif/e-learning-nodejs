@@ -1,0 +1,33 @@
+admin , teacher , student , subject 
+
+student :{
+    register
+    login
+    logout
+    delete account
+    join subject
+    leave subject
+    show all teachers
+    show all subjects
+
+}
+
+teacher {
+    register
+    login
+    logout
+    delete account
+    add subject
+    remove subject
+    show all student in subject
+
+
+}
+admin {
+    login
+    logout
+    show all student 
+    show all teachers
+    show all subjects
+    remove student,teacher,admin and subject
+}
