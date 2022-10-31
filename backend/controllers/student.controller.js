@@ -39,16 +39,16 @@ class Student {
     }
 
    }
-//    static delAccount = async (req,res)=>{
-//     try{
-//         const std = studentModel.findByIdAndDelete(req.params.id)
+   static delAccount = async (req,res)=>{
+    try{
+        const std = studentModel.findByIdAndDelete(req.params.id)
         
-//         resApi(res,true,std,"account deleted")
-//     }
-//     catch(e){
-//         resApi(res,false,e,e.message)
-//     }
-//    }
+        resApi(res,true,std,"account deleted")
+    }
+    catch(e){
+        resApi(res,false,e,e.message)
+    }
+   }
 
    static joinSubject =async (req,res)=>{
     try{
