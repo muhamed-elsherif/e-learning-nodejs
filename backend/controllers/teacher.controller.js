@@ -24,10 +24,16 @@ class Teacher {
             resApi(res,false,e,e.message)
         }
     } 
-    static logout = async(req,res)=>{
-        try{}
-        catch(e){}
-    }
+    static logout = async (req,res)=>{
+        try{
+            req.user.tokens = req.user.tokens.filter(t=> t.token != req.token)
+            await req.user.save()
+            resApi(res,true,req.user,"logged out")
+        }
+        catch(e){
+            resApi(res,false,e,e.message)
+        }
+    }    
     static edit = async(req,res)=>{
         try{
 
